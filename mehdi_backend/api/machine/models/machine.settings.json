@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "machines",
+  "info": {
+    "name": "Machine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Liter_price": {
+      "type": "float"
+    },
+    "brand_beer_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "capacity": {
+      "type": "biginteger"
+    }
+  }
+}

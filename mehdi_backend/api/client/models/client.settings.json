@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "Client"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Balance": {
+      "type": "biginteger"
+    },
+    "transactions": {
+      "via": "client",
+      "collection": "transaction"
+    }
+  }
+}

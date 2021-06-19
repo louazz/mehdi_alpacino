@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "amount": {
+      "type": "float"
+    },
+    "client": {
+      "model": "client",
+      "via": "transactions"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    }
+  }
+}
